@@ -1,0 +1,9 @@
+framework:
+    messenger:
+        transports:
+            mailer: 
+                dsn: 'doctrine://default?queue_name=mailer'
+                rate_limiter: mailer
+
+        routing:
+            'Symfony\Component\Mailer\Messenger\SendEmailMessage': mailer
